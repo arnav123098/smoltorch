@@ -7,11 +7,11 @@ class Embedding:
         emb_dim: int,
         generator: torch.Generator = None
     ):
-        self.weights = torch.randn((num_emb, emb_dim), generator=generator)
+        self.emb = torch.randn((num_emb, emb_dim), generator=generator)
 
     def __call__(self, input):
-        self.out = self.weights[input]
+        self.out = self.emb[input]
         return self.out
     
     def parameters(self):
-        return [self.weights]
+        return [self.emb]
