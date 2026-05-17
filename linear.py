@@ -12,7 +12,7 @@ class Linear:
         self.weights = torch.randn((fan_out, fan_in), generator=generator)
         self.bias = torch.randn(fan_out, generator=generator) if bias else None
 
-    def forward(self, input: torch.Tensor) -> torch.Tensor:
+    def __call__(self, input: torch.Tensor) -> torch.Tensor:
         return F.linear(input, self.weights, self.bias)
     
     def parameters(self) -> list[torch.Tensor]:
