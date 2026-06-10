@@ -4,4 +4,4 @@ a sunday project that i created while revisiting karpathy's zero to hero series 
 
 ### todos for later
 - [ ] complete module.py
-- [ ] implement a transformer using this
+- [ ] make rms norm
